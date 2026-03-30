@@ -1,7 +1,7 @@
 manifestVersion: 1
 
 build:
-  script: rbnx/build.sh
+  script: scripts/build.sh
 
 package:
   id: com.vendor.nav2_rbnx
@@ -16,4 +16,5 @@ nodes:
     type: python
     start: >
       source /opt/ros/humble/setup.bash &&
+      bash ./scripts/start.sh &&
       exec python3 -m nav2_rbnx_agent.node

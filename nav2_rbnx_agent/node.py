@@ -320,7 +320,7 @@ def main() -> None:
     print(f"[nav2-rbnx] MCP endpoint {resp.allocated_endpoint}", flush=True)
 
     _start_nav2_launch()
-    threading.Thread(target=_start_ros2, daemon=True).start()
+    # threading.Thread(target=_start_ros2, daemon=True).start()s
     threading.Thread(target=_start_mcp_http, args=(mcp_port,), daemon=True).start()
     print("[nav2-rbnx] ready", flush=True)
 
